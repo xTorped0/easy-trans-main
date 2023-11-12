@@ -1,0 +1,84 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.content .main {
+  display: flex;
+  background: url(../../public/photos/main.jpg) no-repeat center center #1E1E1E;
+  background-size: cover;
+  height: calc(100vh - 5.5em);
+}
+.content .main__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 2em 4.5em;
+  height: 100%;
+  color: #FFF;
+  font-family: Montserrat;
+}
+.content .main__title h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 3.75rem;
+}
+.content .main__title h1::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  color: #F8C300;
+  background: #F8C300;
+}
+.content .main__title h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  color: #F8C300;
+  background: #F8C300;
+}
+.content .main__dialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  gap: 3em;
+  max-width: 30%;
+  padding: 0.5em 1.5em;
+  border-radius: 1.375rem;
+  border: 2px solid #FFF;
+  opacity: 0.9;
+  background: #30302F;
+  margin: 0 2em 2em auto;
+  color: #fff;
+}
+.content .main__dialog_title {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  letter-spacing: 0.075rem;
+}
+.content .main__dialog_button {
+  border-radius: 0.5em;
+  padding: 0.5em 1.5em;
+  background: #F8C300;
+  opacity: 0.95;
+  font-size: 1.25em;
+}
+.content .main__dialog_button:hover {
+  box-shadow: inset 0px 0px 4px 4px #c59b00;
+  cursor: pointer;
+}
+.content .main__dialog_contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .main__dialog_contacts a {
+  color: #fff;
+  text-decoration: underline;
+}

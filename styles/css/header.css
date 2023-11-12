@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 5em;
+  gap: 3em;
+  background: #30302F;
+  font-family: "Source Sans 3", sans-serif;
+}
+.header__logo {
+  flex: 1;
+}
+.header__logo img {
+  height: 4.125rem;
+  width: auto;
+}
+.header__menu {
+  display: flex;
+  gap: 3em;
+}
+.header__menu_item {
+  text-decoration: none;
+  color: white;
+}
+.header__menu_item.instagram {
+  text-decoration: underline;
+}
+.header__menu_item:hover {
+  color: #F8C300;
+}
+.header__order {
+  padding: 0.5em 1em;
+  background: #F8C300;
+  color: #000;
+  border-radius: 0.5em;
+  filter: drop-shadow(-4px 4px 20px rgba(255, 255, 255, 0.2));
+}
+.header__order:hover {
+  box-shadow: inset 0px 0px 4px 4px #c59b00;
+  cursor: pointer;
+}

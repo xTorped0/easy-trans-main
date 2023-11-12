@@ -1,0 +1,117 @@
+@import './_/vars.scss';
+
+.content {
+	display: flex;
+	flex-direction: column;
+
+	.main {
+		display: flex;
+		// flex-direction: column;
+		background: url(../../public/photos/main.jpg) no-repeat center center #1E1E1E;
+		background-size: cover;
+
+		height: calc(100vh - 5.5em);
+
+		&__title {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			margin: 0 0 2em 4.5em;
+			height: 100%;
+
+			color: #FFF;
+			font-family: Montserrat;
+
+			h1 {
+				width: fit-content;
+				font-size: 3.75rem;
+
+				&::before {
+					content: '';
+					display: block;
+
+					width: 100%;
+					height: 2px;
+
+					color: $main_yellow;
+					background: $main_yellow;
+				}
+			
+				&::after {
+					content: '';
+					display: block;
+
+					width: 100%;
+					height: 2px;
+
+					color: $main_yellow;
+					background: $main_yellow;
+				}
+
+			}
+		}
+		
+		&__dialog {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			align-self: flex-end;
+
+			gap: 3em;
+
+			max-width: 30%;
+
+			padding: 0.5em 1.5em;
+
+			border-radius: 1.375rem;
+			border: 2px solid #FFF;
+			
+			opacity: 0.9;
+			background: $main_grey;
+			margin: 0 2em 2em auto;
+
+			color: #fff;
+
+			&_title {
+				text-align: center;
+
+				font-family: Roboto;
+				font-size: 1.75rem;
+				font-weight: 500;
+				line-height: 2.5rem;
+				letter-spacing: 0.075rem;
+			}
+			
+			&_button {
+				border-radius: .5em;
+
+				padding: .5em 1.5em;
+				background: $main_yellow;
+				opacity: 0.95;
+
+				font-size: 1.25em;
+
+				&:hover {
+					box-shadow: inset 0px 0px 4px 4px darken($main_yellow, 10%);
+					
+					cursor: pointer;
+				}
+			}
+			
+			&_contacts {
+				display: flex;
+				flex-direction: column;
+
+				justify-content: center;
+				align-items: center;
+
+				a {
+					color: #fff;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

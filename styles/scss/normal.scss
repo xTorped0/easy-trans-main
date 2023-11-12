@@ -1,0 +1,64 @@
+/* NORMALIZATION */
+
+html {
+	height: 100%;
+}
+
+body {
+	position: relative;
+	height: 100%;
+	margin: 0;
+	color: black;
+	background-color: white;
+}
+
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0.5em 0;
+	font-weight: 600;
+	color: inherit;
+}
+
+p {
+	margin: initial;
+}
+
+button, input, optgroup, select, textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+legend {
+	width: unset;
+	max-width: unset;
+	margin: unset;
+	padding: unset;
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+	html {
+		font-size: 0.8rem;
+	}
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+	html {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (min-width: 1920px)  {
+	html {
+		font-size: 1.5rem;
+	}
+}
+
