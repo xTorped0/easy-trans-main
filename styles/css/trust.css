@@ -1,0 +1,51 @@
+.why-trust {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 6em 4em;
+  gap: 2em;
+  font-family: Roboto;
+}
+.why-trust__header {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #FFF;
+  font-size: 3.25rem;
+}
+.why-trust__reasons {
+  display: flex;
+  gap: 2em;
+}
+.why-trust__reason {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border-radius: 0.625rem;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+}
+.why-trust__stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2em;
+}
+.why-trust__stats_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-family: "Source Sans 3", sans-serif;
+}
+.why-trust__stats_item .title {
+  font-weight: 700;
+  font-size: 3.4375rem;
+}
+.why-trust__stats .line {
+  display: block;
+  height: 4em;
+  width: 0.1em;
+  background: #F8C300;
+}

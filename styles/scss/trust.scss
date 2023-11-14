@@ -1,0 +1,78 @@
+@import './_/vars.scss';
+
+.why-trust {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+
+	margin: 6em 4em;
+	gap: 2em;
+
+	font-family: Roboto;
+
+	&__header {
+		text-align: center;
+
+		margin-bottom: 1em;
+
+		color: #FFF;
+
+		font-size: 3.25rem;
+	}
+	
+	&__reasons {
+		display: flex;
+
+		gap: 2em;
+	}
+	
+	&__reason {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		padding: 1em;
+
+		border-radius: 0.625rem;
+		background: rgba(255, 255, 255, 0.80);
+
+		font-size: 1.5rem;
+	}
+	
+	&__stats {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		margin-top: 2em;
+
+		&_item {
+			display: flex;
+			flex-direction: column;
+
+			justify-content: center;
+			align-items: center;
+
+			color: #FFF;
+
+			font-family: 'Source Sans 3', sans-serif;
+
+			.title {
+				font-weight: 700;
+				font-size: 3.4375rem;
+			}
+		}
+
+		.line {
+			display: block;
+
+			height: 4em;
+			width: .1em;
+
+			background: $main_yellow;
+		}
+	}
+}
+
+	

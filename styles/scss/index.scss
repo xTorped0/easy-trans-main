@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import './normal';
 @import './header';
 @import './content';	
+@import './trust.scss';
+@import './rules.scss';
 
 .yellow {
 	color: $main_yellow;

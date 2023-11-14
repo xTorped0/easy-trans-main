@@ -3,6 +3,8 @@
 .content {
 	display: flex;
 	flex-direction: column;
+	
+	background: $main_background;
 
 	.main {
 		display: flex;
