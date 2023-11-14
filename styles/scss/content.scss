@@ -15,7 +15,7 @@
 		height: calc(100vh - 5.5em);
 
 		@media (min-aspect-ratio: 16/9) {
-			background-size: auto;
+			background-size: auto 135%;
 		}
 
 		&__title {
