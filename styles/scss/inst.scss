@@ -1,0 +1,39 @@
+.inst {
+	display: flex;
+	flex-direction: column;
+
+	gap: 3em;
+	
+	margin-bottom: 4em;
+
+	&__header {
+		text-align: center;
+
+		font-family: 'Montserrat';
+		font-size: 3.125rem;
+		font-weight: 500;
+	}
+
+	&__items {
+		display: flex;
+		gap: 5.5em;
+
+		width: 100%;
+
+		img {
+			flex: 1;
+
+			height: auto;
+			width: 25%;
+
+			&:nth-child(odd) {
+				margin-bottom: 3em;
+			}
+
+			&:nth-child(2n) {
+				margin-top: 3em;
+			}
+		}
+	}
+}
+	

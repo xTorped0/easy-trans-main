@@ -1,0 +1,58 @@
+@import './_/vars.scss';
+
+.footer {
+	display: flex;
+
+	justify-content: space-around;
+
+	padding: 2em 4.5em;
+
+	border-top: 1px solid $main_yellow;
+	background: $main_grey;
+	color: #fff;
+
+	font-family: 'Roboto';
+
+	&__logo {
+		width: min(30%, 25em);
+		height: auto;
+	}
+	
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+
+		justify-content: center;
+		align-items: center;
+
+		font-size: 1.625em;
+
+		gap: 0.5em;
+
+		span {
+			align-self: start;
+			
+			color: #D9D9D9;
+		}
+
+		a {
+			color: #fff;
+			text-decoration: underline;
+		}
+	
+		&_group {
+			display: flex;
+
+			justify-content: center;
+			align-items: center;
+
+			gap: 0.5em;
+
+			a {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+}
+	

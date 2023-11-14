@@ -56,8 +56,9 @@
 		}
 
 		&_picture {
-			width: 40em;
-			height: 25em;
+			width: min(40%, 40em);
+			height: auto;
+			max-height: 25em;
 		}
 
 		&_title {

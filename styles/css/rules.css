@@ -37,8 +37,9 @@
   gap: 2.75em;
 }
 .rules__item_picture {
-  width: 40em;
-  height: 25em;
+  width: min(40%, 40em);
+  height: auto;
+  max-height: 25em;
 }
 .rules__item_title {
   font-weight: 500;
