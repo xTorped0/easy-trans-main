@@ -9,6 +9,7 @@
 
 	background: $main_grey;
 	font-family: 'Source Sans 3', sans-serif;
+	font-size: 1.5em;
 
 	&__logo {
 		flex: 1;
@@ -41,18 +42,19 @@
 	&__order {
 		padding: .5em 1em;
 
-		background: $main_yellow;
-		color: #000;
-
-		border-radius: .5em;
+		border-radius: 1em;
+		border: none;
 
 		filter: drop-shadow(-4px 4px 20px rgba(255, 255, 255, 0.20));
+		background: $main_yellow;
+		color: #000;
+		
+		font-weight: 600;
 
 		&:hover {
 			// background: darken($main_yellow, 10%);
 			box-shadow: inset 0px 0px 4px 4px darken($main_yellow, 10%);
 			// color: #FFF;
-			
 			cursor: pointer;
 		}
 	}

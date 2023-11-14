@@ -5,6 +5,7 @@
   gap: 3em;
   background: #30302F;
   font-family: "Source Sans 3", sans-serif;
+  font-size: 1.5em;
 }
 .header__logo {
   flex: 1;
@@ -29,10 +30,12 @@
 }
 .header__order {
   padding: 0.5em 1em;
+  border-radius: 1em;
+  border: none;
+  filter: drop-shadow(-4px 4px 20px rgba(255, 255, 255, 0.2));
   background: #F8C300;
   color: #000;
-  border-radius: 0.5em;
-  filter: drop-shadow(-4px 4px 20px rgba(255, 255, 255, 0.2));
+  font-weight: 600;
 }
 .header__order:hover {
   box-shadow: inset 0px 0px 4px 4px #c59b00;

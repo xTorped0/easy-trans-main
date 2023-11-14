@@ -24,7 +24,13 @@
 			flex: 1;
 
 			height: auto;
-			width: 25%;
+			max-height: 70vh;
+
+			width: auto;
+			max-width: 25%;
+
+			object-fit: contain;
+			margin: auto;
 			
 			&:nth-child(odd) {
 				margin-bottom: 3em;
