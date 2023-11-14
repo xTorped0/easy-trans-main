@@ -9,6 +9,11 @@
   background-size: cover;
   height: calc(100vh - 5.5em);
 }
+@media (min-aspect-ratio: 16/9) {
+  .content .main {
+    background-size: auto;
+  }
+}
 .content .main__title {
   display: flex;
   flex-direction: column;

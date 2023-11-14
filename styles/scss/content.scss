@@ -14,6 +14,10 @@
 
 		height: calc(100vh - 5.5em);
 
+		@media (min-aspect-ratio: 16/9) {
+			background-size: auto;
+		}
+
 		&__title {
 			display: flex;
 			flex-direction: column;
