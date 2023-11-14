@@ -22,7 +22,27 @@
 }
 .inst__items img:nth-child(odd) {
   margin-bottom: 3em;
+  animation: 4s linear infinite card;
 }
 .inst__items img:nth-child(2n) {
   margin-top: 3em;
+  animation: 4s linear 2s infinite card;
+}
+
+@keyframes card {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(2.5deg);
+  }
+  50% {
+    transform: rotateZ(0deg);
+  }
+  75% {
+    transform: rotateZ(-2.5deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
 }
