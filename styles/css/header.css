@@ -1,11 +1,14 @@
 .header {
   display: flex;
   align-items: center;
+  position: sticky;
+  top: -1px;
   padding: 0.5em 5em;
   gap: 3em;
   background: #30302F;
   font-family: "Source Sans 3", sans-serif;
   font-size: 1.5em;
+  z-index: 2;
 }
 .header__logo {
   flex: 1;

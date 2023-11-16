@@ -4,28 +4,28 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>EasyTranc</title>
-		<link rel="icon" href="./public/photos/logoIco.ico" type="image/x-icon">
+		<link rel="icon" href="./resources/photos/logoIco.ico" type="image/x-icon">
 		<link rel="stylesheet" href="./styles/css/index.css" type="text/css">
 		<!-- <link rel="stylesheet" type="text/css" href="/index.css"> -->
 	</head>
 	<body>
 		<header class="header">
 		<div class="header__logo">
-			<img src="./public/photos/logoCut.png" alt="logo">
+			<img src="./resources/photos/logoCut.png" alt="logo">
 		</div>
 		<nav class="header__menu">
 				<a class="header__menu_item" href="#move">Переїзди</a>
 				<a class="header__menu_item" href="#anotherService">Інші послуги</a>
-				<a class="header__menu_item" href="#">Контакти</a>
+				<a class="header__menu_item" href="#footer">Контакти</a>
 				<a class="header__menu_item instagram" href="https://www.instagram.com/easy_trans.kyiv/" target="_blank">Instagram</a>
 			</nav>
-			<button  class="header__order">
+			<button class="header__order" name="order">
 				Замовити
 			</button>
 		</header>
 		<main class="content">
 			<div class="main">
-				<!-- <img src="./public/photos/main.png" alt="photo"> -->
+				<!-- <img src="./resources/photos/main.png" alt="photo"> -->
 				<div class="main__title">
 					<h1>EasyTrans</h1>
 					<h2>
@@ -40,7 +40,7 @@
 					<span class="main__dialog_title">
 						Маленький крок до великого переїзду!
 					</span>
-					<button class="main__dialog_button">
+					<button class="main__dialog_button" name="order">
 						Залишити заявку
 					</button>
 					<div class="main__dialog_contacts">
@@ -113,7 +113,7 @@
 					Ваш <span class="yellow">Переїзд</span> - Ваші <span class="yellow">Правила!</span>
 				</h2>
 				<div class="rules__item">
-					<img src="./public/photos/rules1.png" class="rules__item_picture" alt="room">
+					<img src="./resources/photos/rules1.png" class="rules__item_picture" alt="room">
 					<div class="rules__item_group">
 						<span class="rules__item_title yellow">
 							Квартирний переїзд 
@@ -126,7 +126,7 @@
 					</div>
 				</div>
 				<div class="rules__item">
-					<img src="./public/photos/rules2.png" class="rules__item_picture" alt="room">
+					<img src="./resources/photos/rules2.png" class="rules__item_picture" alt="room">
 					<div class="rules__item_group">
 						<span class="rules__item_title yellow">
 							Офісний переїзд 
@@ -138,7 +138,7 @@
 					</div>
 				</div>
 				<div class="rules__item">
-					<img src="./public/photos/rules3.png" class="rules__item_picture" alt="room">
+					<img src="./resources/photos/rules3.png" class="rules__item_picture" alt="room">
 					<div class="rules__item_group">
 						<span class="rules__item_title yellow">
 							Переїзд будинку 
@@ -150,7 +150,7 @@
 					</div>
 				</div>
 				<div class="rules__item">
-					<img src="./public/photos/rules4.png" class="rules__item_picture" alt="room">
+					<img src="./resources/photos/rules4.png" class="rules__item_picture" alt="room">
 					<div class="rules__item_group" id="anotherService">
 						<span class="rules__item_title yellow">
 							Хелпери
@@ -161,7 +161,7 @@
 					</div>
 				</div>
 				<div class="rules__item">
-					<img src="./public/photos/rules5.png" class="rules__item_picture" alt="room">
+					<img src="./resources/photos/rules5.png" class="rules__item_picture" alt="room">
 					<div class="rules__item_group">
 						<span class="rules__item_title yellow">
 							Прибирання непотрібих 
@@ -177,7 +177,7 @@
 					</div>
 				</div>
 				<div class="rules__item">
-					<img src="./public/photos/rules6.png" class="rules__item_picture" alt="room">
+					<img src="./resources/photos/rules6.png" class="rules__item_picture" alt="room">
 					<div class="rules__item_group">
 						<span class="rules__item_title yellow">
 							Завжди чисті 
@@ -193,15 +193,15 @@
 						Фотозвіт наших клієнтів:
 					</h2>
 					<div class="inst__items">
-						<img src="./public/photos/inst1.png" alt="inst 1">
-						<img src="./public/photos/inst2.png" alt="inst 2">
-						<img src="./public/photos/inst3.png" alt="inst 3">
+						<img src="./resources/photos/inst1.png" alt="inst 1">
+						<img src="./resources/photos/inst2.png" alt="inst 2">
+						<img src="./resources/photos/inst3.png" alt="inst 3">
 					</div>
 				</div>
 			</div>
 		</main>
-		<footer class="footer">
-			<img src="./public/photos/logo.png" alt="logo" class="footer__logo">
+		<footer class="footer" id="footer">
+			<img src="./resources/photos/logo.png" alt="logo" class="footer__logo">
 			<div class="footer__contacts">
 				<span> Контакти: </span>
 				<a href="tel:+38 093 939 0105"> +38 093 939 0105 </a>
@@ -211,19 +211,39 @@
 				<a href="mailto:easytrans@ukr.net">easytrans@ukr.net</a>
 				<div class="footer__contacts_group">
 					<a href="https://www.instagram.com/easy_trans.kyiv/">
-						<img src="./public/photos/instSvg.svg" alt="inst">
+						<img src="./resources/photos/instSvg.svg" alt="inst">
 					</a>
 					<a href="https://t.me/easyytrans">
-						<img src="./public/photos/tg.svg" alt="telegram">
+						<img src="./resources/photos/tg.svg" alt="telegram">
 					</a>
 					<a href="#">
-						<img src="./public/photos/fb.svg" alt="facebook">
+						<img src="./resources/photos/fb.svg" alt="facebook">
 					</a>
 					<a href="#">
-						<img src="./public/photos/tt.png" alt="tiktok">
+						<img src="./resources/photos/tt.png" alt="tiktok">
 					</a>
 				</div>
 			</div>
 		</footer>
+		<dialog class="dialog order" name="make-order">
+			<div class="dialog__close"> x </div>
+			<div class="dialog__content">
+				<img src="./resources/photos/logoCut.png" alt="logo" class="dialog__content_logo">
+
+				<form class="dialog__content_form">
+					<input type="text" class="dialog__content_input" name="name" placeholder="Введiть iм`я">
+					<input type="number" class="dialog__content_input" name="phone" placeholder="+380">
+	
+					<button class="dialog__content_button" name="make_order">
+						Замовити
+					</button>
+				</form>
+
+				<span class="dialog__content_text">
+					Якщо протягом 7 хвилин менеджер не зателефонує <span class="yellow"> Вам - знижка 7%. </span>
+				</span>
+			</div>
+		</dialog>
+		<script src="./src/index.js" type="module"></script>
 	</body>
 </html>

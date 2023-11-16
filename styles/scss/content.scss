@@ -8,15 +8,29 @@
 
 	.main {
 		display: flex;
-		// flex-direction: column;
-		background: url(../../public/photos/main.jpg) no-repeat center center #1E1E1E;
-		background-size: cover;
-		opacity: 0.65;
+		position: relative;
+
+		z-index: 1;
+
+		&::before {
+			content: "";
+			background: url(../../resources/photos/main.jpg) no-repeat center center #1E1E1E;
+			background-size: cover;
+			opacity: 0.65;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
 
 		height: calc(100vh - 5.5em);
 
 		@media (min-aspect-ratio: 16/9) {
-			background-size: auto 135%;
+			&::before {
+				background-size: auto 135%;
+			}
 		}
 
 		&__title {
