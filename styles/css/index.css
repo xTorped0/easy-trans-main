@@ -173,7 +173,8 @@ body::-webkit-scrollbar {
 .content .main__title h1 {
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 3.75rem;
+  font-size: 4.75rem;
+  animation: fromleft 2s linear 1;
 }
 .content .main__title h1::before {
   content: "";
@@ -193,6 +194,9 @@ body::-webkit-scrollbar {
 }
 .content .main__title h2 {
   font-size: 2.75rem;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 4s steps(40, end);
 }
 .content .main__dialog {
   display: flex;
@@ -243,6 +247,22 @@ body::-webkit-scrollbar {
   text-decoration: underline;
 }
 
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes fromleft {
+  from {
+    margin-left: -10em;
+  }
+  to {
+    margin-left: 0;
+  }
+}
 body::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 0.2em;

@@ -46,7 +46,9 @@
 
 			h1 {
 				width: fit-content;
-				font-size: 3.75rem;
+				font-size: 4.75rem;
+
+				animation: fromleft 2s linear 1;
 
 				&::before {
 					content: '';
@@ -73,6 +75,10 @@
 
 			h2 {
 				font-size: 2.75rem;
+				overflow: hidden;
+				white-space: nowrap;
+
+				animation: typewriter 2s steps(40, end); 
 			}
 		}
 		
@@ -144,4 +150,22 @@
 			}
 		}
 	}
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fromleft {
+  from {
+    margin-left: -10em;
+  }
+  to {
+    margin-left: 0;
+  }
 }
