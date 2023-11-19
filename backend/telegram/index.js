@@ -118,7 +118,7 @@ bot.onText(/\/orders/, async (msg, match) => {
 			const { name, number, created_at } = order;
 			const formattedTime = new Date(created_at).toLocaleString('uk-UA', { timeZone: 'Europe/Kiev' });
 
-			return `Iм'я: ${name}\nНомер: ${number}\nЧас замовлення: ${formattedTime}`;
+			return `Iм'я: ${name}\nНомер: ${number}\nЧас замовлення: ${formattedTime}\n=====\n`;
 		}).join('\n');
 
 		bot.sendMessage(chatId, message);
