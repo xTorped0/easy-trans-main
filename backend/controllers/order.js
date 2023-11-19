@@ -17,7 +17,7 @@ export const postOrder = (req, res) => {
 		}
 
 		try {
-			onOrderCreated({ name, number });
+			onOrderCreated(results.rows[0]);
 		} catch(error) {
 			console.log(error);
 		}
