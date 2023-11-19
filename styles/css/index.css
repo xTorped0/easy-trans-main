@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("../../node_modules/aos/dist/aos.css");
 body::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 0.2em;
@@ -196,7 +197,7 @@ body::-webkit-scrollbar {
   font-size: 2.75rem;
   overflow: hidden;
   white-space: nowrap;
-  animation: typewriter 4s steps(40, end);
+  animation: typewriter 2s steps(40, end);
 }
 .content .main__dialog {
   display: flex;

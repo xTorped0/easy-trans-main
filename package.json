@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "aos": "^2.3.4",
+    "node-telegram-bot-api": "^0.64.0"
+  }
+}
