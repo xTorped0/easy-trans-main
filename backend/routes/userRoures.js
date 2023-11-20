@@ -1,5 +1,5 @@
-import express from 'express';
-import { getUserById, getUsers, postUser, deleteUser } from '../controllers/user.mjs';
+const express = require('express');
+const { getUserById, getUsers, postUser, deleteUser } = require('../controllers/user.js');
 
 const router = express.Router();
 
@@ -8,4 +8,4 @@ router.post('/user', postUser);
 router.get('/user/:id', getUserById);
 router.delete('/user/:id', deleteUser);
 
-export const userRoutes = router;
+module.exports = router;

@@ -1,7 +1,7 @@
-import TelegramBot from 'node-telegram-bot-api';
-import { deleteUser, getSubcribedUsers, addUser, unsubscribeUser, authorizeUser, getAllOrders, subscribeUser } from './user.mjs';
+const TelegramBot = require('node-telegram-bot-api');
+const { deleteUser, getSubcribedUsers, addUser, unsubscribeUser, authorizeUser, getAllOrders, subscribeUser } = require('./user.js');
 
-import * as dotenv from 'dotenv';
+const dotenv = require('dotenv');
 
 dotenv.config();
 
@@ -160,7 +160,7 @@ bot.onText(/\/start/, (msg) => {
 });
 
 
-export async function onOrderCreated(order = {}) {
+async function onOrderCreated(order = {}) {
 	try {
 		const users = await getSubcribedUsers();
 
@@ -176,3 +176,5 @@ export async function onOrderCreated(order = {}) {
 		console.log(error);
 	}
 };
+
+module.exports = { onOrderCreated };

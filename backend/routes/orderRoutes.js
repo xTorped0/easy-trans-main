@@ -1,5 +1,5 @@
-import express from 'express';
-import { getOrders, postOrder, deleteOrder } from '../controllers/order.mjs';
+const express = require('express');
+const { getOrders, postOrder, deleteOrder } = require('../controllers/order.js');
 
 const router = express.Router();
 
@@ -12,4 +12,4 @@ router.get('/', getOrders);
 // DELETE customer
 router.delete('/:id', deleteOrder);
 
-export const orderRoutes = router;
+module.exports = router;

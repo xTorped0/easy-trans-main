@@ -1,6 +1,6 @@
-import { asyncPool } from "../config/queries.mjs";
+const { asyncPool } = require("../config/queries.js");
 
-export const addUser = async (data) => {
+const addUser = async (data) => {
 	const { name, email, number, userId, chatId } = data;
 
 	const [user] = await asyncPool(`SELECT * FROM users WHERE user_id = ${userId} LIMIT 1`);
@@ -9,7 +9,7 @@ export const addUser = async (data) => {
 	return asyncPool('INSERT INTO users (name, email, number, user_id, chat_id) VALUES ($1, $2, $3, $4, $5)', [name, email, number, userId, chatId]);
 };
 
-export const authorizeUser = async (userId) => {
+const authorizeUser = async (userId) => {
 	const [user] = await asyncPool(`SELECT * FROM users WHERE user_id = ${userId} LIMIT 1`);
 
 	if(!user) throw new Error('Для виконання цієї дії ви повинні спочатку зареєструватися');
@@ -22,16 +22,16 @@ export const authorizeUser = async (userId) => {
 	}
 }
 
-export const getSubcribedUsers = () => {
+const getSubcribedUsers = () => {
 	return asyncPool('SELECT * FROM users WHERE user_id IS NOT NULL AND subscribed = true ORDER BY id ASC');
 };
 
-export const isAuthorized = (user_id) => {
+const isAuthorized = (user_id) => {
 	const [user] = asyncPool(`SELECT * FROM users WHERE user_id = ${user_id} AND authorized = true LIMIT 1`);
 	return user.authorized;
 }
 
-export const getAllOrders = async (user_id) => {
+const getAllOrders = async (user_id) => {
 	const [user] = await asyncPool(`SELECT * FROM users WHERE user_id = ${user_id} LIMIT 1`);
 
 	if(!user) throw new Error('Для виконання цієї дії ви повинні спочатку зареєструватися');
@@ -40,7 +40,7 @@ export const getAllOrders = async (user_id) => {
 	return asyncPool('SELECT * FROM orders ORDER BY id ASC');
 };
 
-export const subscribeUser = async (user_id) => {
+const subscribeUser = async (user_id) => {
 	const [user] = await asyncPool(`SELECT * FROM users WHERE user_id = ${user_id} LIMIT 1`);
 
 	if(!user) throw new Error('Для виконання цієї дії ви повинні спочатку зареєструватися');
@@ -53,7 +53,7 @@ export const subscribeUser = async (user_id) => {
 	}
 }
 
-export const unsubscribeUser = async (user_id) => {
+const unsubscribeUser = async (user_id) => {
 	const [user] = await asyncPool(`SELECT * FROM users WHERE user_id = ${user_id} LIMIT 1`);
 
 	if(!user) throw new Error('Для виконання цієї дії ви повинні спочатку зареєструватися');
@@ -66,6 +66,17 @@ export const unsubscribeUser = async (user_id) => {
 	}
 }
 
-export const deleteUser = (user_id) => {
+const deleteUser = (user_id) => {
   return asyncPool('DELETE FROM users WHERE user_id = $1', [user_id])
+};
+
+module.exports = {
+  addUser,
+  authorizeUser,
+  getSubcribedUsers,
+  isAuthorized,
+  getAllOrders,
+  subscribeUser,
+  unsubscribeUser,
+  deleteUser
 };

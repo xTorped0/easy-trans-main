@@ -1,8 +1,6 @@
-// import asyncHandler from 'express-async-handler';
+const pool = require('../config/queries.js');
 
-import pool from '../config/queries.mjs';
-
-export const getUsers = (request, response) => {
+const getUsers = (request, response) => {
 	pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
 		if(error) {
 			throw error;
@@ -11,7 +9,7 @@ export const getUsers = (request, response) => {
 	});
 };
 
-export const postUser = (request, response) => {
+const postUser = (request, response) => {
 	const { name, email, chatId, number } = request.body;
 
 	if(!name || !email) {
@@ -31,7 +29,7 @@ export const postUser = (request, response) => {
 	);
 };
 
-export const getUserById = (request, response) => {
+const getUserById = (request, response) => {
   const id = parseInt(request.params.id)
 
   pool.query('SELECT * FROM users WHERE id = $1', [id], (error, results) => {
@@ -42,7 +40,7 @@ export const getUserById = (request, response) => {
   })
 }
 
-export const deleteUser = (request, response) => {
+const deleteUser = (request, response) => {
   const id = parseInt(request.params.id);
 
   pool.query('DELETE FROM users WHERE id = $1', [id], (error, results) => {
@@ -53,3 +51,10 @@ export const deleteUser = (request, response) => {
     response.status(200).send(`User deleted with ID: ${id}`)
   })
 }
+
+module.exports = {
+  getUsers,
+  postUser,
+  getUserById,
+	deleteUser
+};

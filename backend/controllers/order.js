@@ -1,8 +1,7 @@
-import { query } from "express";
-import pool from "../config/queries.mjs";
-import { onOrderCreated } from "../telegram/index.mjs";
+const { pool } = require('../config/queries.js');
+const { onOrderCreated } = require('../telegram/index.js');
 
-export const postOrder = (req, res) => {
+const postOrder = (req, res) => {
 	const { name, number } = req.body;
 
 	if(!name || !number) {
@@ -45,7 +44,7 @@ export const postOrder = (req, res) => {
 	// }
 };
 
-export const getOrders = (req, res) => {
+const getOrders = (req, res) => {
 	pool.query('SELECT * FROM orders ORDER BY id ASC', (error, results) => {
 		if(error) {
 			res.status(400);
@@ -62,12 +61,18 @@ export const getOrders = (req, res) => {
 	});
 };
 
-export const deleteOrder = (req, res) => {
-	query('DELETE FROM orders WHERE id = $1', [req.params.id], (error, results) => {
+const deleteOrder = (req, res) => {
+	pool.query('DELETE FROM orders WHERE id = $1', [req.params.id], (error, results) => {
 		if (error) {
 			res.status(404);
 			throw error;
 		}
 		res.status(200).send(`Order deleted with ID: ${req.params.id}`);
 	});
+};
+
+module.exports = {
+  postOrder,
+  getOrders,
+  deleteOrder
 };
