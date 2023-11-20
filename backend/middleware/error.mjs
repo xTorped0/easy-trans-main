@@ -1,4 +1,4 @@
-import { contants } from '../constants.js';
+import { contants } from '../constants.mjs';
 
 export const errorHandler = (err, req, res, next) => {
 	const statusCode = res.code ? res.statusCode : 500;

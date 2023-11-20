@@ -1,5 +1,5 @@
 import TelegramBot from 'node-telegram-bot-api';
-import { deleteUser, getSubcribedUsers, addUser, unsubscribeUser, authorizeUser, getAllOrders, subscribeUser } from './user.js';
+import { deleteUser, getSubcribedUsers, addUser, unsubscribeUser, authorizeUser, getAllOrders, subscribeUser } from './user.mjs';
 
 import * as dotenv from 'dotenv';
 

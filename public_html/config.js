@@ -1,3 +1,3 @@
 export const Network = {
-	api: 'easytrans.pp.ua:5001/api'
+	api: 'https://95.216.242.245:5001/api'
 }

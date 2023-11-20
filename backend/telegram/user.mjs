@@ -1,4 +1,4 @@
-import { asyncPool } from "../config/queries.js";
+import { asyncPool } from "../config/queries.mjs";
 
 export const addUser = async (data) => {
 	const { name, email, number, userId, chatId } = data;

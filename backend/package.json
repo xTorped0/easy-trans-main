@@ -2,10 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
-  "type": "module",
+  "main": "server.mjs",
+  "type": "commonjs",
   "scripts": {
-    "dev": "node server.js"
+    "dev": "node server.mjs"
   },
   "keywords": [],
   "author": "",

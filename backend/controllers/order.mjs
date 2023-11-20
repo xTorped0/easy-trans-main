@@ -1,6 +1,6 @@
 import { query } from "express";
-import pool from "../config/queries.js";
-import { onOrderCreated } from "../telegram/index.js";
+import pool from "../config/queries.mjs";
+import { onOrderCreated } from "../telegram/index.mjs";
 
 export const postOrder = (req, res) => {
 	const { name, number } = req.body;

@@ -1,5 +1,5 @@
 import express from 'express';
-import { getOrders, postOrder, deleteOrder } from '../controllers/order.js';
+import { getOrders, postOrder, deleteOrder } from '../controllers/order.mjs';
 
 const router = express.Router();
 

@@ -1,6 +1,6 @@
 // import asyncHandler from 'express-async-handler';
 
-import pool from '../config/queries.js';
+import pool from '../config/queries.mjs';
 
 export const getUsers = (request, response) => {
 	pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {

@@ -3,12 +3,12 @@ import * as dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
-import { errorHandler } from './middleware/error.js';
+import { errorHandler } from './middleware/error.mjs';
 
-import { orderRoutes } from './routes/orderRoutes.js';
-import { userRoutes } from './routes/userRoures.js';
+import { orderRoutes } from './routes/orderRoutes.mjs';
+import { userRoutes } from './routes/userRoures.mjs';
 
-import './telegram/index.js';
+import './telegram/index.mjs';
 
 dotenv.config();
 
