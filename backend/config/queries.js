@@ -2,12 +2,22 @@ import pg from 'pg';
 
 const { Pool } = pg;
 
+import * as dotenv from 'dotenv';
+
+dotenv.config();
+
+const USER = process.env.DB_USER || 'me';
+const HOST = process.env.DB_HOST || 'localhost';
+const DATABASE = process.env.DB_DATABASE || 'api';
+const PASSWORD = process.env.DB_PASSWORD || 'root';
+const PORT = process.env.DB_PORT || 5432;
+
 const pool = new Pool({
-  user: 'me',
-  host: 'localhost',
-  database: 'api',
-  password: 'root',
-  port: 5432,
+  user: USER,
+  host: HOST,
+  database: DATABASE,
+  password: PASSWORD,
+  port: PORT,
 });
 
 export const asyncPool = (query, params = []) => {
