@@ -1,3 +1,5 @@
+import { Network } from "../config.js";
+
 export function handleOrders() {
 	const dialog = document.querySelector('dialog[name="make-order"]');
 	const form = dialog.querySelector('.dialog__content_form');
@@ -9,7 +11,7 @@ export function handleOrders() {
 		const data = Object.fromEntries(formData.entries());
 
 		try {
-			await fetch('http://localhost:5001/api/orders', {
+			await fetch(Network.api + '/orders', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
