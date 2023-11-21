@@ -40,7 +40,6 @@ const text = `Не втрачай можливість  <span class="yellow"> о
 
 export function handleOnScroll () {	
 	const dialog = document.querySelector('dialog[name="make-order"]');
-	const dialog_text = dialog.querySelector('.dialog__content_text');
 	const showDialog = document.querySelector('#showDialog');
 	const menu = document.querySelector('.mobile.menu');
 
@@ -57,9 +56,7 @@ export function handleOnScroll () {
 			isShown = true;
 			if(dialog.open) return;
 			//
-			dialog.showModal();
-			document.body.style.overflow = 'hidden'; // Disable scrolling
-			dialog_text.innerHTML = text; 
+			onOpenDialog();
 		}
 	});
 
@@ -69,8 +66,18 @@ export function handleOnScroll () {
 		isShown = true;
 		if(dialog.open) return;
 
-		dialog.showModal();
-		document.body.style.overflow = 'hidden'; // Disable scrolling
-		dialog_text.innerHTML = text;
+		onOpenDialog();
 	}, 15000);
+}
+
+export function onOpenDialog() {
+	const dialog = document.querySelector('dialog[name="make-order"]');
+	const dialog_text = dialog.querySelector('.dialog__content_text');
+
+	dialog.showModal();
+	document.body.style.overflow = 'hidden'; // Disable scrolling
+	dialog_text.innerHTML = text;
+
+	// Set focus to the dialog itself
+	dialog.focus();
 }

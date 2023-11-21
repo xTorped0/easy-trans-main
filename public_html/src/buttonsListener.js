@@ -1,3 +1,5 @@
+import { onOpenDialog } from "./order.js";
+
 const text = `Якщо протягом 7 хвилин менеджер не зателефонує <span class="yellow"> Вам - знижка 7%. </span>`;
 
 export function buttonsListener() {
@@ -7,9 +9,8 @@ export function buttonsListener() {
 
 	buttons.forEach(button => {
 		button.addEventListener('click', () => {
+			onOpenDialog();
 			dialog_text.innerHTML = text;
-			document.body.style.overflow = 'hidden'; // Disable scrolling
-			dialog.showModal();
 		});
 	});
 }
