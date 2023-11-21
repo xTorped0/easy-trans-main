@@ -104,7 +104,7 @@ body::-webkit-scrollbar {
 }
 .header__menu_item {
   text-decoration: none;
-  color: #d4d4d4F;
+  color: #d4d4d4;
 }
 .header__menu_item.instagram {
   text-decoration: underline;
@@ -890,6 +890,78 @@ body::-webkit-scrollbar {
     text-align: start;
     width: 100%;
     font-size: 0.875rem;
+  }
+}
+body::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.2em;
+}
+body::-webkit-scrollbar {
+  width: 1px;
+}
+
+@media (max-width: 425px) {
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #1E1E1E;
+    font-family: "Roboto";
+    font-size: 1.375rem;
+    color: #D9D9D9;
+    z-index: 2;
+  }
+  .menu.mobile {
+    display: none;
+  }
+  .menu.mobile.active {
+    display: flex;
+  }
+  .menu__cross {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: #D9D9D9;
+    margin-bottom: 2em;
+  }
+  .menu__nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu__nav_item {
+    position: relative;
+    color: #d4d4d4;
+    text-decoration: underline;
+    padding: 1.25em 0.5em;
+  }
+  .menu__nav_item::before {
+    content: "";
+    height: 0.1em;
+    width: 100%;
+    top: 0;
+    display: flex;
+    position: absolute;
+    background: #D9D9D9;
+  }
+  .menu__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-size: 1.325em;
+    gap: 0.5em;
+  }
+  .menu__contacts span {
+    align-self: start;
+    color: #D9D9D9;
+  }
+  .menu_group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
   }
 }
 .gallery {
