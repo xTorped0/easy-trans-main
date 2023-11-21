@@ -1,0 +1,26 @@
+@import '../_/vars.scss';
+
+@include for-phone-only {
+	.footer {
+		flex-direction: column;
+		align-items: flex-start;
+
+		padding: 1em 2em;
+		gap: 1.75em;
+
+		&__logo {
+			display: none;
+		}
+
+		&__contacts {
+			align-items: flex-start;
+
+			font-family: 'Roboto';
+			font-size: 1.375rem;
+		}
+
+		&_group {
+			gap: 0.5em;
+		}
+	}
+}

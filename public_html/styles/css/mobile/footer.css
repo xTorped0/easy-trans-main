@@ -1,0 +1,19 @@
+@media (max-width: 425px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 2em;
+    gap: 1.75em;
+  }
+  .footer__logo {
+    display: none;
+  }
+  .footer__contacts {
+    align-items: flex-start;
+    font-family: "Roboto";
+    font-size: 1.375rem;
+  }
+  .footer_group {
+    gap: 0.5em;
+  }
+}

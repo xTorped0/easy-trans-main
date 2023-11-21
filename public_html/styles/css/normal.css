@@ -17,8 +17,8 @@ body {
   margin: 0;
   color: black;
   background-color: white;
-  overflow: auto;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 *, ::after, ::before {

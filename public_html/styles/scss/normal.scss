@@ -13,8 +13,9 @@ body {
 	color: black;
 	background-color: white;
 
-	overflow: auto;
 	overflow-x: hidden;
+  overflow-y: auto;
+	
 	@extend %scroll;
 }
 
