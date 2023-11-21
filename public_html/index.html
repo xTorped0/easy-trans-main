@@ -14,7 +14,7 @@
 		<div class="header__logo">
 			<img src="./resources/photos/logoCut.png" alt="logo">
 		</div>
-		<nav class="header__menu">
+			<nav class="header__menu">
 				<a class="header__menu_item" href="#move">Переїзди</a>
 				<a class="header__menu_item" href="#anotherService">Інші послуги</a>
 				<a class="header__menu_item" href="#footer">Контакти</a>
@@ -23,6 +23,17 @@
 			<button class="header__order" name="order">
 				Замовити
 			</button>
+			<div class="mobile call">
+				<img src="./resources/photos/call.svg" alt="call">
+			</div>
+			
+			<div class="mobile burger">
+				<svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="30" height="3.57139" rx="1.78569" fill="white"/>
+					<rect y="10.7141" width="30" height="3.57139" rx="1.78569" fill="white"/>
+					<rect y="21.4287" width="30" height="3.57139" rx="1.78569" fill="white"/>
+					</svg>					
+			</div>
 		</header>
 		<main class="content">
 			<div class="main">
@@ -48,6 +59,18 @@
 						<a href="tel:+38 093 939 0105"> +38 093 939 0105 </a>
 						<a href="tel:+38 067 939 0105"> +38 067 939 0105 </a>
 					</div>
+				</div>
+			</div>
+			<div class="mobile dialog_mobile">
+				<span class="dialog_mobile_title">
+					Маленький крок до великого переїзду!
+				</span>
+				<button class="dialog_mobile_button" name="order">
+					Залишити заявку
+				</button>
+				<div class="dialog_mobile_contacts">
+					<a href="tel:+38 093 939 0105"> +38 093 939 0105 </a>
+					<a href="tel:+38 067 939 0105"> +38 067 939 0105 </a>
 				</div>
 			</div>
 			<div class="why-trust">
@@ -110,10 +133,15 @@
 				</div>
 			</div>
 			<div class="rules">
-				<h2 class="rules__header" id="move">
+				<a id="move" style="position:absolute; top: -10em;"></a>
+				<h2 class="rules__header">
 					Ваш <span class="yellow">Переїзд</span> - Ваші <span class="yellow">Правила!</span>
 				</h2>
 				<div class="rules__item" data-aos="fade-left">
+					<span class="rules__item_title mobile">
+						Квартирний переїзд 
+						без стресу та клопоту
+					</span>
 					<img src="./resources/photos/rules1.png" class="rules__item_picture" alt="room">
 					<div class="rules__item_group">
 						<span class="rules__item_title yellow">
@@ -127,8 +155,12 @@
 					</div>
 				</div>
 				<div class="rules__item" data-aos="fade-right">
+					<span class="rules__item_title mobile">
+						Офісний переїзд 
+						без сюрпризів
+					</span>
 					<img src="./resources/photos/rules2.png" class="rules__item_picture" alt="room">
-					<div class="rules__item_group">
+					<div class="rules__item_group" id="showDialog">
 						<span class="rules__item_title yellow">
 							Офісний переїзд 
 							без сюрпризів
@@ -139,6 +171,10 @@
 					</div>
 				</div>
 				<div class="rules__item" data-aos="fade-left">
+					<span class="rules__item_title mobile">
+						Переїзд будинку 
+						без зайвих витрат
+					</span>
 					<img src="./resources/photos/rules3.png" class="rules__item_picture" alt="room">
 					<div class="rules__item_group">
 						<span class="rules__item_title yellow">
@@ -150,9 +186,10 @@
 						</span>
 					</div>
 				</div>
-				<div class="rules__item" data-aos="fade-right">
+				<div class="rules__item desktop" data-aos="fade-right">
 					<img src="./resources/photos/rules4.png" class="rules__item_picture" alt="room">
-					<div class="rules__item_group" id="anotherService">
+					<div class="rules__item_group" style="position:relative;">
+						<a id="anotherService" style="position:absolute; top: -10em;"></a>
 						<span class="rules__item_title yellow">
 							Хелпери
 						</span>
@@ -161,7 +198,7 @@
 						</span>
 					</div>
 				</div>
-				<div class="rules__item" data-aos="fade-left">
+				<div class="rules__item desktop" data-aos="fade-left">
 					<img src="./resources/photos/rules5.png" class="rules__item_picture" alt="room">
 					<div class="rules__item_group">
 						<span class="rules__item_title yellow">
@@ -177,7 +214,7 @@
 						</span>
 					</div>
 				</div>
-				<div class="rules__item" data-aos="fade-right">
+				<div class="rules__item desktop" data-aos="fade-right">
 					<img src="./resources/photos/rules6.png" class="rules__item_picture" alt="room">
 					<div class="rules__item_group">
 						<span class="rules__item_title yellow">
@@ -189,7 +226,98 @@
 						</span>
 					</div>
 				</div>
-				<div class="inst">
+				<div class="mobile service">
+					<h2 class="inst__header">
+						<span class="yellow"> Інші </span> послуги
+					</h2>
+					<div class="gallery service-carousel">
+						<div class="rules__item gallery__element" data-aos="fade-right" current>
+							<img src="./resources/photos/rules4.png" class="rules__item_picture" alt="room">
+							<div class="rules__item_group" style="position:relative;">
+								<a id="anotherService" style="position:absolute; top: -10em;"></a>
+								<span class="rules__item_title yellow">
+									Хелпери
+								</span>
+								<span class="rules__item_text">
+									Хелперів відносять до групи персоналу, однак у порівнянні з вантажниками і збирачами, вони універсальні,   креативні, вільно знайдуть вихід із можливих труднощів, мають              більшу відповідальність.
+								</span>
+							</div>
+						</div>
+						<div class="rules__item gallery__element" data-aos="fade-left">
+							<img src="./resources/photos/rules5.png" class="rules__item_picture" alt="room">
+							<div class="rules__item_group">
+								<span class="rules__item_title yellow">
+									Прибирання непотрібих 
+									речей та їх утилізация  
+								</span>
+								<span class="rules__item_text">
+									Як правило цю послугу замовляють перед продажем або генеральним ремонтом приміщення. Якщо ви та людина, яка дочитала до цього місця, то при замовленні скажіть слово "Mars" та отримайте 
+									<span class="yellow">
+										5%
+									</span>  
+									знижку.
+								</span>
+							</div>
+						</div>
+						<div class="rules__item gallery__element" data-aos="fade-right">
+							<img src="./resources/photos/rules6.png" class="rules__item_picture" alt="room">
+							<div class="rules__item_group">
+								<span class="rules__item_title yellow">
+									Завжди чисті 
+									пакувальні матеріали
+								</span>
+								<span class="rules__item_text">
+									При організації переїзду забезпечимо якісними, перевіреними часом пакувальними матеріалами.
+								</span>
+							</div>
+						</div>
+						<div class="items">
+							<span class="item current"></span>
+							<span class="item"></span>
+							<span class="item"></span>
+						</div>
+						<div class="controllers">
+							<button class="back">
+								<span class="">
+									←
+								</span>
+							</button>
+							<button class="forward">
+								<span class="">
+									→
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="mobile inst">
+					<h2 class="inst__header">
+						Фотозвіт наших клієнтів:
+					</h2>
+					<div class="gallery instagram-carousel">
+						<img src="./resources/photos/inst1.png" class="gallery__element" alt="inst 1" current>
+						<img src="./resources/photos/inst2.png" class="gallery__element" alt="inst 2">
+						<img src="./resources/photos/inst3.png" class="gallery__element" alt="inst 3">
+						<div class="items">
+							<span class="item current"></span>
+							<span class="item"></span>
+							<span class="item"></span>
+						</div>
+						<div class="controllers">
+							<button class="back">
+								<span class="">
+									←
+								</span>
+							</button>
+							<button class="forward">
+								<span class="">
+									→
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="inst desktop">
 					<h2 class="inst__header">
 						Фотозвіт наших клієнтів:
 					</h2>
@@ -217,10 +345,10 @@
 					<a href="https://t.me/easyytrans">
 						<img src="./resources/photos/tg.svg" alt="telegram">
 					</a>
-					<a href="#">
+					<a href="https://www.facebook.com/profile.php?id=100093707538950">
 						<img src="./resources/photos/fb.svg" alt="facebook">
 					</a>
-					<a href="#">
+					<a href="https://www.tiktok.com/@easy_trans?_t=8hMYD9kTxnZ&_r=1">
 						<img src="./resources/photos/tt.png" alt="tiktok">
 					</a>
 				</div>

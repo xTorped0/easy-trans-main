@@ -1,0 +1,134 @@
+@import '../_/vars.scss';
+
+@include for-phone-only {
+	.content {
+		.main {
+			height: calc(50vh - 5.5em);
+
+			&__dialog {
+				display: none;
+			}
+
+			&__title {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+	
+				margin-left: 1.5em;
+				height: 100%;
+	
+				color: #d4d4d4;
+				font-family: 'Montserrat';
+	
+				h1 {
+					width: fit-content;
+					font-size: 1.75rem;
+	
+					animation: fromleft 2s linear 1;
+	
+					&::before {
+						content: '';
+						display: block;
+	
+						width: 100%;
+						height: 2px;
+	
+						color: $main_yellow;
+						background: $main_yellow;
+					}
+				
+					&::after {
+						content: '';
+						display: block;
+	
+						width: 100%;
+						height: 2px;
+	
+						color: $main_yellow;
+						background: $main_yellow;
+					}
+				}
+	
+				h2 {
+					font-size: 1rem;
+					overflow: hidden;
+					white-space: nowrap;
+	
+					animation: typewriter 2s steps(40, end); 
+				}
+			}
+		}
+		.dialog {
+			&_mobile {
+				display: flex;
+				flex-direction: column;
+
+				align-items: center;
+
+				gap: 1.5rem;
+
+				padding: 3.5rem 0;
+				margin: 1.5em 3.25em 2em;
+
+				background: #323231;
+				border-radius: 1.25rem;
+
+				font-family: 'Roboto';
+
+				position: relative;
+
+				&_title {
+					color: #d4d4d4;
+					font-size: 1.3125rem;
+					text-align: center;
+				}
+
+				&_button {
+					padding: .5em 1.5em;
+
+					border-radius: 1.75em;
+					background: $main_yellow;
+
+					font-size: 1.25rem;
+
+					line-height: 1.875rem;
+					color: #000;
+				}
+
+				&_contacts {
+					display: flex;
+					flex-direction: column;
+
+					font-size: 1.4375rem;
+					line-height: 1.75rem;
+
+					a {
+						color: #d4d4d4;
+						text-decoration: underline;
+					}
+				}
+
+			
+				&::after {
+					content: '';
+					display: block;
+					width: 100%;
+					height: 5em;
+					background: #323231;
+					border-radius: 0 0 50% 50%;
+					position: absolute;
+					bottom: -2em;
+				}
+			}
+		}
+
+		.service {
+			flex-direction: column;
+
+			.rules__item {
+				background: #292928!important;
+				color: #d4d4d4!important;
+			}
+		}
+	}
+}

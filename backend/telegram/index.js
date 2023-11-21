@@ -6,10 +6,18 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const token = process.env.TELEGRAM_TOKEN;
+const domain = process.env.DOMAIN;
 
-const bot = new TelegramBot(token, { polling: true, interval: 1000, onlyFirstMatch: true });
+const bot = new TelegramBot(token, { 
+	polling: false, 
+	request: {
+		strictSSL: false
+	} 
+}); // polling: true, interval: 1000, onlyFirstMatch: true
 
 let inProcess = {};
+
+bot.setWebHook(`${domain}/bot${token}`);
 
 bot.onText(/\/instruction/, (msg, match) => {
 	const chatId = msg.chat.id;
@@ -167,7 +175,7 @@ async function onOrderCreated(order = {}) {
 		const { name, number, created_at } = order;
 		const formattedTime = new Date(created_at).toLocaleString('uk-UA', { timeZone: 'Europe/Kiev' });
 		
-		users?.forEach(user => {
+		if(users) users.forEach(user => {
 			bot.sendMessage(
 				user.chat_id, 
 				`Iм'я: ${name}\nНомер: ${number}\nЧас замовлення: ${formattedTime}`);
@@ -177,4 +185,4 @@ async function onOrderCreated(order = {}) {
 	}
 };
 
-module.exports = { onOrderCreated };
+module.exports = { onOrderCreated, bot, token };

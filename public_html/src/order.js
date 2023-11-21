@@ -26,3 +26,37 @@ export function handleOrders() {
 		}
 	});
 }
+
+const text = `Не втрачай можливість  <span class="yellow"> отримати кешбек </span>, залишай заявку, якщо менеджер не зателефоную протягом 7 хвилин -  <span class="yellow"> 7% знижки  </span> на будь-які послуги. `
+
+export function handleOnScroll () {	
+	const dialog = document.querySelector('dialog[name="make-order"]');
+	const dialog_text = dialog.querySelector('.dialog__content_text');
+	const showDialog = document.querySelector('#showDialog');
+
+	const rect = showDialog.getBoundingClientRect();
+
+	let isShown = false;
+	
+	document.addEventListener('scroll', (e) => {
+		if(isShown) return;
+
+		if (rect.top <= window.scrollY) {
+			isShown = true;
+			if(dialog.open) return;
+			//
+			dialog.showModal();
+			dialog_text.innerHTML = text; 
+		}
+	});
+
+	setTimeout(() => {
+		if(isShown) return;
+
+		isShown = true;
+		if(dialog.open) return;
+
+		dialog.showModal();
+		dialog_text.innerHTML = text;
+	}, 15000);
+}

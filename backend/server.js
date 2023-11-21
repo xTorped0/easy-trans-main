@@ -7,7 +7,7 @@ const errorHandler = require('./middleware/error.js');
 const orderRoutes = require('./routes/orderRoutes.js');
 const userRoutes = require('./routes/userRoures.js');
 
-require('./telegram/index.js');
+const { token, bot } = require('./telegram/index.js');
 
 dotenv.config();
 
@@ -29,6 +29,13 @@ app.get('/api', (request, response) => {
 	response.json({ info: 'Node.js, Express, and Postgres API' })
 });
 
+// Endpoint for handling updates from Telegram
+app.post(`/api/bot${token}`, (req, res) => {
+  bot.processUpdate(req.body);
+  res.sendStatus(200);
+});
+
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`);
 });
+

@@ -20,7 +20,7 @@ const postOrder = (req, res) => {
 		} catch(error) {
 			console.log(error);
 		}
-		res.status(201).send(`Order added with ID: ${results.rows[0].id}`);
+		res.status(201).send(`Order added with ID: ${results.rows[0]?.id}`);
 	});
 
 	// const orderAvailable = await Order.findOne({ name, number });

@@ -13,6 +13,14 @@
 @import './footer.scss';
 @import './dialog.scss';
 
+@import './mobile/index.scss';
+
 .yellow {
 	color: $main_yellow;
+}
+
+@media (min-width: 426px) {
+	.mobile {
+		display: none;
+	}
 }

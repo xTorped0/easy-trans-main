@@ -33,7 +33,7 @@
 
 		&_item {
 			text-decoration: none;
-			color: #FFFF;
+			color: #d4d4d4F;
 
 			&.instagram {
 				text-decoration: underline;
@@ -60,7 +60,7 @@
 		&:hover {
 			// background: darken($main_yellow, 10%);
 			box-shadow: inset 0px 0px 4px 4px darken($main_yellow, 10%);
-			// color: #FFF;
+			// color: #d4d4d4;
 			cursor: pointer;
 		}
 	}

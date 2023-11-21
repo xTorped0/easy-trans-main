@@ -32,7 +32,7 @@
   justify-content: center;
   margin-left: 4.5em;
   height: 100%;
-  color: #FFF;
+  color: #d4d4d4;
   font-family: "Montserrat";
 }
 .content .main__title h1 {
@@ -76,7 +76,7 @@
   opacity: 0.9;
   background: #30302F;
   margin: 0 2em 2em auto;
-  color: #fff;
+  color: #d4d4d4;
 }
 .content .main__dialog_title {
   text-align: center;
@@ -108,7 +108,7 @@
   font-family: "Roboto";
 }
 .content .main__dialog_contacts a {
-  color: #fff;
+  color: #d4d4d4;
   text-decoration: underline;
 }
 

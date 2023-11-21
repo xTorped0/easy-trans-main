@@ -1,0 +1,97 @@
+@media (max-width: 425px) {
+  .content .main {
+    height: calc(50vh - 5.5em);
+  }
+  .content .main__dialog {
+    display: none;
+  }
+  .content .main__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1.5em;
+    height: 100%;
+    color: #d4d4d4;
+    font-family: "Montserrat";
+  }
+  .content .main__title h1 {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1.75rem;
+    animation: fromleft 2s linear 1;
+  }
+  .content .main__title h1::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    color: #F8C300;
+    background: #F8C300;
+  }
+  .content .main__title h1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    color: #F8C300;
+    background: #F8C300;
+  }
+  .content .main__title h2 {
+    font-size: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 2s steps(40, end);
+  }
+  .content .dialog_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 3.5rem 0;
+    margin: 1.5em 3.25em 2em;
+    background: #323231;
+    border-radius: 1.25rem;
+    font-family: "Roboto";
+    position: relative;
+  }
+  .content .dialog_mobile_title {
+    color: #d4d4d4;
+    font-size: 1.3125rem;
+    text-align: center;
+  }
+  .content .dialog_mobile_button {
+    padding: 0.5em 1.5em;
+    border-radius: 1.75em;
+    background: #F8C300;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: #000;
+  }
+  .content .dialog_mobile_contacts {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4375rem;
+    line-height: 1.75rem;
+  }
+  .content .dialog_mobile_contacts a {
+    color: #d4d4d4;
+    text-decoration: underline;
+  }
+  .content .dialog_mobile::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5em;
+    background: #323231;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    bottom: -2em;
+  }
+  .content .service {
+    flex-direction: column;
+  }
+  .content .service .rules__item {
+    background: #292928 !important;
+    color: #d4d4d4 !important;
+  }
+}

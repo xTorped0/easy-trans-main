@@ -18,6 +18,7 @@ body {
   color: black;
   background-color: white;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 *, ::after, ::before {

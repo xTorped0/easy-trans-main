@@ -1,0 +1,15 @@
+@media (max-width: 425px) {
+  .header {
+    gap: 0.75em;
+    padding: 0.5em 1.5em;
+  }
+  .header__menu, .header__order {
+    display: none;
+  }
+  .header__logo {
+    flex: 1;
+  }
+  .header__logo img {
+    height: 3rem;
+  }
+}

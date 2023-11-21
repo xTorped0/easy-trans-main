@@ -1,0 +1,70 @@
+.gallery {
+  position: relative;
+  height: 100%;
+}
+.gallery__element {
+  display: none;
+  max-width: 100%;
+  margin: auto;
+  transition: 0.2s ease-in-out;
+}
+.gallery__element[current] {
+  display: flex;
+}
+.gallery .items {
+  display: flex;
+  list-style: none;
+  border-radius: 0.25rem;
+  position: absolute;
+  right: 0;
+  padding: 0;
+  z-index: 9;
+  width: 50%;
+  left: 5%;
+  bottom: 5%;
+  text-align: left;
+}
+.gallery .items .item {
+  width: 20px;
+  height: 1px;
+  margin: 0 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0;
+  margin: 0 5px;
+  transition: 0.2s ease-in-out;
+}
+.gallery .items .item.current {
+  background-color: #fead15;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.gallery .controllers {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+.gallery .controllers button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  color: #d4d4d4fff;
+  background: transparent;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.gallery .controllers button:hover {
+  transform: scale(1.2);
+}
+.gallery .controllers button span {
+  display: inline-block;
+  position: relative;
+  line-height: 1.4;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  font-size: 11pt;
+}

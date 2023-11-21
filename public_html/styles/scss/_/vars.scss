@@ -11,3 +11,9 @@ $main_background: #1E1E1E;
 		width: 1px;
 	}
 }
+
+@mixin for-phone-only {
+	@media (max-width: 425px) {
+		@content;
+	}
+}

@@ -1,0 +1,52 @@
+@include for-phone-only {
+	.why-trust {
+		margin: 0.5em 1em;
+		gap: 0.5em;
+
+		&__header {
+			margin-bottom: .5em;
+	
+			font-size: 1.4375rem;
+		}
+
+		&__reasons {
+			flex-direction: column;
+
+			gap: 0.5em;
+		}
+
+		&__reason {
+			font-size: 1rem;
+		}
+
+		&__stats {
+			margin-top: 1em;
+	
+			&_item {
+				color: #d4d4d4;
+	
+				font-family: 'Roboto', sans-serif;
+
+				span {
+					text-align: center;
+				}
+	
+				.title {
+					font-family: "Montserrat", sans-serif;
+					
+  				font-weight: 700;
+					font-size: 0.875rem;
+				}
+			}
+	
+			.line {
+				display: block;
+	
+				height: 3em;
+				width: .1em;
+	
+				background: $main_yellow;
+			}
+		}
+	}
+}

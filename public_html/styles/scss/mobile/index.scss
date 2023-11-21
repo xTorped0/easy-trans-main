@@ -1,0 +1,19 @@
+@import '../_/vars.scss';
+
+@import './header.scss';
+@import './content.scss';
+@import './trust.scss';
+@import './rules.scss';
+@import './inst.scss';
+
+@import './gallery.scss';
+
+@include for-phone-only {
+	.mobile {
+		display: flex;
+	}
+
+	.desktop {
+		display: none;
+	}
+}

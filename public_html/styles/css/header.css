@@ -23,7 +23,7 @@
 }
 .header__menu_item {
   text-decoration: none;
-  color: white;
+  color: #d4d4d4F;
 }
 .header__menu_item.instagram {
   text-decoration: underline;
