@@ -33,13 +33,16 @@ export function handleOnScroll () {
 	const dialog = document.querySelector('dialog[name="make-order"]');
 	const dialog_text = dialog.querySelector('.dialog__content_text');
 	const showDialog = document.querySelector('#showDialog');
+	const menu = document.querySelector('.mobile.menu');
 
 	const rect = showDialog.getBoundingClientRect();
 
 	let isShown = false;
+
+	const isActive = () => menu.classList.contains('active');
 	
 	document.addEventListener('scroll', (e) => {
-		if(isShown) return;
+		if(isShown || isActive) return;
 
 		if (rect.top <= window.scrollY) {
 			isShown = true;
@@ -51,7 +54,7 @@ export function handleOnScroll () {
 	});
 
 	setTimeout(() => {
-		if(isShown) return;
+		if(isShown || isActive) return;
 
 		isShown = true;
 		if(dialog.open) return;
