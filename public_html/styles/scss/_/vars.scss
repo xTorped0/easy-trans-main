@@ -13,7 +13,7 @@ $main_background: #1E1E1E;
 }
 
 @mixin for-phone-only {
-	@media (max-width: 425px) {
+	@media (max-width: 745px) {
 		@content;
 	}
 }
