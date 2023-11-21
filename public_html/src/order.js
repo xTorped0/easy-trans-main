@@ -3,6 +3,7 @@ import { Network } from "../config.js";
 export function handleOrders() {
 	const dialog = document.querySelector('dialog[name="make-order"]');
 	const form = dialog.querySelector('.dialog__content_form');
+	const close = document.querySelector('.dialog__close');
 
 	form.addEventListener('submit', async (event) => {
 		event.preventDefault();
@@ -25,6 +26,14 @@ export function handleOrders() {
 			console.error(error);
 		}
 	});
+		
+	close.addEventListener('click', () => {
+		dialog.close();
+	});
+
+	dialog.addEventListener('close', () => {
+    document.body.style.overflow = ''; // Enable scrolling
+  });
 }
 
 const text = `Не втрачай можливість  <span class="yellow"> отримати кешбек </span>, залишай заявку, якщо менеджер не зателефоную протягом 7 хвилин -  <span class="yellow"> 7% знижки  </span> на будь-які послуги. `
@@ -49,6 +58,7 @@ export function handleOnScroll () {
 			if(dialog.open) return;
 			//
 			dialog.showModal();
+			document.body.style.overflow = 'hidden'; // Disable scrolling
 			dialog_text.innerHTML = text; 
 		}
 	});
@@ -60,6 +70,7 @@ export function handleOnScroll () {
 		if(dialog.open) return;
 
 		dialog.showModal();
+		document.body.style.overflow = 'hidden'; // Disable scrolling
 		dialog_text.innerHTML = text;
 	}, 15000);
 }

@@ -8,7 +8,7 @@
   background: #30302F;
   font-family: "Roboto", sans-serif;
   font-size: 1.5em;
-  z-index: 2;
+  z-index: 10;
 }
 .header__logo {
   flex: 1;

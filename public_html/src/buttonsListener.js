@@ -4,16 +4,12 @@ export function buttonsListener() {
 	const buttons = document.querySelectorAll('button[name="order"]');
 	const dialog = document.querySelector('dialog[name="make-order"]');
 	const dialog_text = dialog.querySelector('.dialog__content_text');
-	const close = document.querySelector('.dialog__close');
 
 	buttons.forEach(button => {
 		button.addEventListener('click', () => {
 			dialog_text.innerHTML = text;
+			document.body.style.overflow = 'hidden'; // Disable scrolling
 			dialog.showModal();
 		});
-	});
-	
-	close.addEventListener('click', () => {
-		dialog.close();
 	});
 }
