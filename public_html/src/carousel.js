@@ -42,7 +42,7 @@ export function carousel(carousel){
 	items.forEach(item => {
 		item.addEventListener('touchstart', (event) => {
 			touchStartX = event.changedTouches[0].clientX;
-		});
+		}, { passive: true });
 
 		item.addEventListener('touchend', (event) => {
 			const touchEndX = event.changedTouches[0].clientX;
@@ -54,6 +54,6 @@ export function carousel(carousel){
 			}
 
 			touchStartX = null;
-		});
+		}, { passive: true });
 	});
 }

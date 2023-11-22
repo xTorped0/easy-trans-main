@@ -50,7 +50,7 @@ export function handleOnScroll () {
 	const isActive = () => menu.classList.contains('active');
 	
 	document.addEventListener('scroll', (e) => {
-		if(isShown || isActive) return;
+		if(isShown || isActive()) return;
 
 		if (rect.top <= window.scrollY) {
 			isShown = true;
@@ -58,16 +58,15 @@ export function handleOnScroll () {
 			//
 			onOpenDialog();
 		}
-	});
+	}, { passive: true });
 
 	setTimeout(() => {
-		if(isShown || isActive) return;
-
+		if(isShown || isActive()) return;
 		isShown = true;
 		if(dialog.open) return;
 
 		onOpenDialog();
-	}, 15000);
+	}, 5000);
 }
 
 export function onOpenDialog() {
