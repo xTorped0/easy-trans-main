@@ -4,8 +4,11 @@
 	display: flex;
 	align-items: center;
 
-	position: sticky;
-	top: -1px;
+	height: 6rem;
+	width: 100%;
+
+	position: fixed;
+	top: 0;
 
 	padding: .5em 5em;
 	gap: 3em;
@@ -28,8 +31,9 @@
 
 	&__menu {
 		display: flex;
+		justify-content: space-between;
 
-		gap: 3em;
+		gap: 2em;
 
 		&_item {
 			text-decoration: none;

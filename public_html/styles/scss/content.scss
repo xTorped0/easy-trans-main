@@ -6,6 +6,8 @@
 	
 	background: $main_background;
 
+	margin-top: 6rem;
+
 	.main {
 		display: flex;
 		position: relative;
@@ -123,8 +125,9 @@
 				padding: .5em 1.5em;
 				background: $main_yellow;
 
+				font-family: "Roboto";
 				font-size: 1.625em;
-				font-weight: 500;
+				font-weight: 600;
 
 				&:hover {
 					box-shadow: inset 0px 0px 4px 4px darken($main_yellow, 10%);
