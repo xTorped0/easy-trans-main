@@ -1,4 +1,4 @@
-@media (max-width: 425px) {
+@media (max-width: 745px) {
   .content .main {
     height: calc(50vh - 5.5em);
   }
@@ -93,5 +93,8 @@
   .content .service .rules__item {
     background: #292928 !important;
     color: #d4d4d4 !important;
+  }
+  .content .service .rules__item_title {
+    color: #F8C300 !important;
   }
 }

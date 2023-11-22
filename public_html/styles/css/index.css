@@ -733,6 +733,9 @@ body::-webkit-scrollbar {
     background: #292928 !important;
     color: #d4d4d4 !important;
   }
+  .content .service .rules__item_title {
+    color: #F8C300 !important;
+  }
 }
 @media (max-width: 745px) {
   .why-trust {
