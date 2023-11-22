@@ -811,6 +811,10 @@ body::-webkit-scrollbar {
     background: #D9D9D9;
     color: #3E3E3C;
   }
+  .rules__item:nth-child(odd) .rules__item_title {
+    font-weight: 600;
+    color: #3E3E3C;
+  }
   .rules__item_group {
     display: flex;
     flex-direction: column;
@@ -829,6 +833,7 @@ body::-webkit-scrollbar {
     font-family: "Montserrat";
     font-size: 1.25rem;
     line-height: 1.2rem;
+    color: #F8C300;
   }
   .rules__item_text {
     font-family: "Roboto";
