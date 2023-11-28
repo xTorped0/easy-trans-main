@@ -556,6 +556,12 @@ body::-webkit-scrollbar {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.dialog__content_accept-image {
+  height: 2.5em;
+}
+.dialog__content .accept-button {
+  margin: auto;
+}
 .dialog__content_form {
   display: flex;
   flex-direction: column;
@@ -585,7 +591,7 @@ body::-webkit-scrollbar {
   font-size: 1.375em;
   font-weight: 500;
 }
-.dialog__content_text {
+.dialog__content_text, .dialog__content_error {
   padding: 0em 2.5em;
   margin: auto;
   max-width: 25.5em;
@@ -596,6 +602,23 @@ body::-webkit-scrollbar {
   font-style: normal;
   font-weight: 500;
   line-height: 1.5em;
+}
+.dialog__content_error {
+  color: #9c2a2a;
+}
+.dialog__content_error:empty {
+  display: none;
+}
+.dialog__content_subtext {
+  margin-top: 1.25em;
+  margin-bottom: -2.25em;
+  padding: 0em 2.5em;
+  text-align: center;
+  color: #D9D9D9;
+  font-family: "Roboto";
+  font-size: 1.1875rem;
+  font-weight: 500;
+  line-height: 1.625rem;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -906,10 +929,25 @@ body::-webkit-scrollbar {
     width: 100%;
     font-size: 1.375rem;
   }
-  .dialog__content_text {
+  .dialog__content_text, .dialog__content_error {
     text-align: start;
     width: 100%;
     font-size: 0.875rem;
+  }
+  .dialog__content_error {
+    padding: 0;
+    margin-bottom: -1.25em;
+  }
+  .dialog__content_subtext, .dialog__content_error {
+    text-align: center;
+    font-size: 0.75rem;
+  }
+  .dialog__content_subtext {
+    margin-top: 0;
+    margin-bottom: -3.25em;
+  }
+  .dialog__content .accept-button {
+    width: 80%;
   }
 }
 body::-webkit-scrollbar-thumb {

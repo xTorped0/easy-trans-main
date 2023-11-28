@@ -380,9 +380,11 @@
 				<img src="./resources/photos/logoCut.png" alt="logo" class="dialog__content_logo">
 
 				<form class="dialog__content_form">
-					<input type="text" class="dialog__content_input" name="name" placeholder="Введiть iм`я">
-					<input type="tel" class="dialog__content_input" name="number" placeholder="+380" pattern="^\+?[1-9]\d{1,14}$">
+					<input type="text" class="dialog__content_input" name="name" placeholder="Введiть iм`я" required>
+					<input type="tel" class="dialog__content_input" name="number" placeholder="+380" pattern="^\+?[1-9]\d{1,14}$" required>
 	
+					<span class="dialog__content_error"></span>
+					
 					<button class="dialog__content_button" name="make_order" type="submit">
 						Замовити
 					</button>
@@ -391,6 +393,26 @@
 				<span class="dialog__content_text">
 					Якщо протягом 7 хвилин менеджер не зателефонує <span class="yellow"> Вам - знижка 7%. </span>
 				</span>
+				<span class="dialog__content_subtext">
+					Бонус активний з 9:00 по 21:00
+				</span>
+			</div>
+		</dialog>
+
+		<dialog class="dialog order" name="accept-order">
+			<div class="dialog__close"> x </div>
+			<div class="dialog__content">
+				<img src="./resources/photos/logoCut.png" alt="logo" class="dialog__content_logo">
+
+				<img src="./resources/photos/accept.svg" alt="accept" class="dialog__content_accept-image">
+
+				<span class="dialog__content_text">
+					Ваша заявка прийнята, очікуйте дзвінок менеджера.
+				</span>
+
+				<button class="dialog__content_button accept-button " name="accept">
+					Зрозуміло
+				</button>
 			</div>
 		</dialog>
 

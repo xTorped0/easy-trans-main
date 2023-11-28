@@ -61,6 +61,14 @@
 			width: auto;
 			object-fit: contain;
 		}
+
+		&_accept-image {
+			height: 2.5em;
+		}
+
+		.accept-button {
+			margin: auto;
+		}
 	
 		&_form {
 			display: flex;
@@ -102,7 +110,7 @@
 			font-weight: 500;
 		}
 		
-		&_text {
+		&_text, &_error {
 			padding: 0em 2.5em;
 			margin: auto;
 			
@@ -117,6 +125,30 @@
 			font-style: normal;
 			font-weight: 500;
 			line-height: 1.5em;
+		}
+
+		&_error {
+			color: #9c2a2a;
+
+			&:empty {
+				display: none;
+			}
+		}
+
+		&_subtext {
+			margin-top: 1.25em;
+			margin-bottom: -2.25em;
+
+			padding: 0em 2.5em;
+			
+			text-align: center;
+
+			color: #D9D9D9;
+
+			font-family: 'Roboto';
+			font-size: 1.1875rem;
+			font-weight: 500;
+			line-height: 1.625rem; 
 		}
 	}
 }

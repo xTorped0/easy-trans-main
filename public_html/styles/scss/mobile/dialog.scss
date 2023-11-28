@@ -26,11 +26,30 @@
 				font-size: 1.375rem;
 			}
 			
-			&_text {
+			&_text, &_error {
 				text-align: start;
 
 				width: 100%;
 				font-size: 0.875rem;
+			}
+
+			&_error {
+				padding: 0;
+				margin-bottom: -1.25em;
+			}
+
+			&_subtext, &_error {
+				text-align: center;
+				font-size: 0.75rem;
+			}
+
+			&_subtext {
+				margin-top: 0;
+				margin-bottom: -3.25em;
+			}
+
+			.accept-button {
+				width: 80%;
 			}
 		}
 	}

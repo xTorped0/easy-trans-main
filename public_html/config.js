@@ -1,3 +1,3 @@
 export const Network = {
-	api: 'easytrans.pp.ua/api'
+	api: 'https://easytrans.org.ua/backend'
 }
